@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int moisture;
+
+    clrscr();
+
+    printf("=== PLANT WATERING SYSTEM ===\n\n");
+
+    printf("Enter soil moisture level (0-100): ");
+    scanf("%d", &moisture);
+
+    if(moisture < 30)
+    {
+        printf("\nSoil is very dry.");
+        printf("\nPump is ON.");
+        printf("\nWatering the plant...");
+    }
+    else if(moisture >= 30 && moisture < 60)
+    {
+        printf("\nSoil moisture is moderate.");
+        printf("\nPump is ON for a short time.");
+    }
+    else
+    {
+        printf("\nSoil has enough water.");
+        printf("\nPump is OFF.");
+        printf("\nNo watering required.");
+    }
+
+    getch();
+}
